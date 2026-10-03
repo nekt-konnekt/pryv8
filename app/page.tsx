@@ -103,8 +103,8 @@ export default function Home() {
 
           <section className="hero">
             <div className="eyebrow"><span className="dot" /> We’re building something new</div>
-            <h1>Private conversations. <span>Real connections.</span></h1>
-            <p>PRYV8 is a platform for adults to connect one-on-one with people they’re interested in through private text, voice, or video conversations.</p>
+            <h1>Meet someone. <span>Make it personal.</span></h1>
+            <p>PRYV8 is a place for adults to connect one-on-one with people they’re interested in through private text, voice, or video conversations.</p>
             <p>Find someone you want to talk to, choose how you want to connect, and pay for their time or attention. If you have an audience, PRYV8 gives you a way to earn from private conversations and direct access to your time.</p>
             <div className="heroMeta"><span>30 sec</span><span>•</span><span>No payment</span><span>•</span><span>Just a quick vote</span></div>
           </section>
