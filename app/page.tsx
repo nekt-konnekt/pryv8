@@ -6,15 +6,15 @@ type Side = "user" | "creator";
 type Answer = string;
 
 const userQuestions = [
-  { key: "vote", title: "Would you pay for a private conversation with someone you like?", options: ["Yes, I’d pay to chat", "Maybe, depends on the price", "Not for me"] },
-  { key: "experience", title: "What kind of connection interests you most?", options: ["Private text", "Voice calls", "Video calls", "Scheduled calls", "Companionship"] },
-  { key: "spend", title: "What would you comfortably spend to start?", options: ["₦1,000", "₦2,500", "₦5,000", "₦10,000+"] },
+  { key: "vote", title: "Ever wanted a little more time with someone you’re drawn to?", options: ["Yes, I’d pay to talk", "Maybe, if the price feels right", "Not for me"] },
+  { key: "experience", title: "How would you want that connection to feel?", options: ["Private text", "Voice calls", "Video calls", "A planned one-on-one call", "Companionship"] },
+  { key: "spend", title: "What would feel comfortable for a first conversation?", options: ["₦1,000", "₦2,500", "₦5,000", "₦10,000+"] },
 ];
 
 const creatorQuestions = [
-  { key: "vote", title: "Would you earn from private conversations with your audience?", options: ["Yes, I’m interested", "Maybe, show me the model", "Not for me"] },
-  { key: "interaction", title: "What would you be comfortable offering?", options: ["Private text", "Voice calls", "Video calls", "Scheduled calls", "Companionship"] },
-  { key: "audience", title: "How big is your current audience?", options: ["Under 1k", "1k–5k", "5k–25k", "25k+"] },
+  { key: "vote", title: "Would you let your audience get closer to you, on your terms?", options: ["Yes, I’m interested", "Maybe, show me how it works", "Not for me"] },
+  { key: "interaction", title: "What kind of access would you feel good offering?", options: ["Private text", "Voice calls", "Video calls", "Booked one-on-one calls", "Companionship"] },
+  { key: "audience", title: "How many people currently follow your work?", options: ["Under 1k", "1k–5k", "5k–25k", "25k+"] },
 ];
 
 export default function Home() {
@@ -85,7 +85,7 @@ export default function Home() {
             <div className="successIcon">✓</div>
             <div className="eyebrow">Vote recorded</div>
             <h1>Thanks for being early.</h1>
-            <p>Your response helps us figure out what PRYV8 should actually become.</p>
+            <p>Your response helps us shape a more personal way to connect.</p>
           </section>
         </div>
       </main>
@@ -102,30 +102,30 @@ export default function Home() {
           </nav>
 
           <section className="hero">
-            <div className="eyebrow"><span className="dot" /> We’re building something new</div>
+            <div className="eyebrow"><span className="dot" /> For the connections that feel different</div>
             <h1>Meet someone. <span>Make it personal.</span></h1>
-            <p>PRYV8 is a place for adults to connect one-on-one with people they’re interested in through private text, voice, or video conversations.</p>
-            <p>Find someone you want to talk to, choose how you want to connect, and pay for their time or attention. If you have an audience, PRYV8 gives you a way to earn from private conversations and direct access to your time.</p>
-            <div className="heroMeta"><span>30 sec</span><span>•</span><span>No payment</span><span>•</span><span>Just a quick vote</span></div>
+            <p>Some conversations stay with you. PRYV8 is being shaped around one-on-one moments with people you’re curious about, drawn to, or simply enjoy talking to.</p>
+            <p>Choose private text, voice, or video, and connect on your terms. If people already follow you, explore earning from your time and attention without giving up your boundaries.</p>
+            <div className="heroMeta"><span>30 sec</span><span>•</span><span>No payment</span><span>•</span><span>Help shape what comes next</span></div>
           </section>
 
           <section className="choiceIntro">
-            <h2>What brings you here?</h2>
-            <p>Pick the side that sounds most like you.</p>
+            <h2>What are you looking for?</h2>
+            <p>There’s room for both sides of a good connection.</p>
           </section>
 
           <section className="choiceGrid">
             <button className="choice choiceConnect" onClick={() => chooseSide("user")}>
               <div className="choiceTop"><span className="choiceIcon">↗</span><span className="num">01</span></div>
-              <h2>I want to connect</h2>
-              <p>I’d pay for private conversation, time, or companionship with someone I’m interested in.</p>
-              <span className="choiceCta">Tell us what you want <b>→</b></span>
+              <h2>I want to meet someone</h2>
+              <p>Make time for a person who catches your interest, with a conversation that feels more personal.</p>
+              <span className="choiceCta">Find my kind of connection <b>→</b></span>
             </button>
             <button className="choice choiceEarn" onClick={() => chooseSide("creator")}>
               <div className="choiceTop"><span className="choiceIcon">✦</span><span className="num">02</span></div>
-              <h2>I want to earn</h2>
-              <p>I’d monetize private access to my time and conversations with my audience.</p>
-              <span className="choiceCta">Tell us what you’d offer <b>→</b></span>
+              <h2>I want to earn from my time</h2>
+              <p>Let your personality and audience open the door to paid conversations, with access on your terms.</p>
+              <span className="choiceCta">Explore earning from access <b>→</b></span>
             </button>
           </section>
 
@@ -149,7 +149,7 @@ export default function Home() {
           {!isContactStep ? (
             <>
               <h1 className="question">{current.title}</h1>
-              <p className="sub">Pick the answer that feels closest. There’s no right answer.</p>
+              <p className="sub">Go with what feels true. There’s no right answer.</p>
               <div className="options">
                 {current.options.map((option) => (
                   <button key={option} className={`option ${answer === option ? "selected" : ""}`} onClick={() => select(option)}>
@@ -161,14 +161,14 @@ export default function Home() {
             </>
           ) : (
             <>
-              <h1 className="question">Where should we reach you?</h1>
-              <p className="sub">Leave your contact after voting. We’ll only use it for this research and launch updates.</p>
+              <h1 className="question">Want us to keep you in the loop?</h1>
+              <p className="sub">Leave your details after voting. We’ll use them for this research and relevant launch updates.</p>
               <div className="field"><label>Email</label><input type="email" value={contact.email} onChange={(e) => setContact({ ...contact, email: e.target.value })} placeholder="you@example.com" autoComplete="email" /></div>
               <div className="field"><label>WhatsApp number</label><input type="tel" value={contact.whatsapp} onChange={(e) => setContact({ ...contact, whatsapp: e.target.value })} placeholder="+234..." autoComplete="tel" /></div>
               <input aria-hidden="true" tabIndex={-1} value={honeypot} onChange={(e) => setHoneypot(e.target.value)} className="honeypot" autoComplete="off" />
               <label className="checks"><input type="checkbox" checked={consent} onChange={(e) => setConsent(e.target.checked)} /><span>I’m 18+ and agree to PRYV8 using these details to contact me about this validation research.</span></label>
               {status === "error" && <p className="errorText">Something failed. Try again.</p>}
-              <button className="next" disabled={!contact.email || !contact.whatsapp || !consent || status === "submitting"} onClick={submit}>{status === "submitting" ? "Saving..." : <>Cast my vote <span>→</span></>}</button>
+              <button className="next" disabled={!contact.email || !contact.whatsapp || !consent || status === "submitting"} onClick={submit}>{status === "submitting" ? "Saving..." : <>Count me in <span>→</span></>}</button>
             </>
           )}
         </div>
