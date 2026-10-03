@@ -18,7 +18,7 @@ button{cursor:pointer}
 .dot{width:7px;height:7px;border-radius:50%;background:#d889ff;box-shadow:0 0 18px #d889ff}
 .hero h1{font-family:Manrope,sans-serif;font-size:clamp(52px,7.5vw,88px);line-height:.96;letter-spacing:-.065em;margin:19px 0 25px}
 .hero h1 span{background:linear-gradient(100deg,#fff 10%,#df9aff 80%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{font-size:20px;line-height:1.55;color:#bdb4c1;max-width:680px;margin:0}
+.hero p{font-size:20px;line-height:1.55;color:#bdb4c1;max-width:680px;margin:0 0 14px}
 .heroMeta{display:flex;gap:11px;align-items:center;margin-top:24px;color:#827986;font-size:12px}
 .heroMeta span:first-child{color:#e2d8e5}
 .choiceIntro{margin-top:35px;margin-bottom:14px}
@@ -66,4 +66,5 @@ button{cursor:pointer}
 .success h1{font-family:Manrope,sans-serif;font-size:56px;letter-spacing:-.06em;margin:15px 0 12px}
 .success p{color:#928996;line-height:1.6}
 .honeypot{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+
 @media(max-width:700px){.shell{width:min(100% - 24px,1120px)}.tinyTrust{display:none}.hero{padding-top:54px}.hero h1{font-size:52px}.hero p{font-size:18px}.heroMeta{flex-wrap:wrap}.choiceGrid{grid-template-columns:1fr}.choice{min-height:260px}.choice h2{margin-top:40px}.footer{display:block}.footer span{display:block;margin:4px 0}.question{font-size:34px}}
