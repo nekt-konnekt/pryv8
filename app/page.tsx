@@ -7,7 +7,7 @@ type Answer = string;
 
 const userQuestions = [
   { key: "vote", title: "Would you pay for a private conversation with someone you like?", options: ["Yes, I’d pay to chat", "Maybe, depends on the price", "Not for me"] },
-  { key: "experience", title: "What kind of connection interests you most?", options: ["Private text", "Voice calls", "Scheduled calls", "Companionship"] },
+  { key: "experience", title: "What kind of connection interests you most?", options: ["Private text", "Voice calls", "Video calls", "Scheduled calls", "Companionship"] },
   { key: "spend", title: "What would you comfortably spend to start?", options: ["₦1,000", "₦2,500", "₦5,000", "₦10,000+"] },
 ];
 
