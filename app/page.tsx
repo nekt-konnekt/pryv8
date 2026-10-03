@@ -13,7 +13,7 @@ const userQuestions = [
 
 const creatorQuestions = [
   { key: "vote", title: "Would you earn from private conversations with your audience?", options: ["Yes, I’m interested", "Maybe, show me the model", "Not for me"] },
-  { key: "interaction", title: "What would you be comfortable offering?", options: ["Private text", "Voice calls", "Scheduled calls", "Companionship"] },
+  { key: "interaction", title: "What would you be comfortable offering?", options: ["Private text", "Voice calls", "Video calls", "Scheduled calls", "Companionship"] },
   { key: "audience", title: "How big is your current audience?", options: ["Under 1k", "1k–5k", "5k–25k", "25k+"] },
 ];
 
@@ -103,8 +103,9 @@ export default function Home() {
 
           <section className="hero">
             <div className="eyebrow"><span className="dot" /> We’re building something new</div>
-            <h1>Some conversations are worth <span>more.</span></h1>
-            <p>PRYV8 is exploring a place where adults can connect one-on-one, privately, with people they genuinely want to talk to.</p>
+            <h1>Private conversations. <span>Real connections.</span></h1>
+            <p>PRYV8 is a platform for adults to connect one-on-one with people they’re interested in through private text, voice, or video conversations.</p>
+            <p>Find someone you want to talk to, choose how you want to connect, and pay for their time or attention. If you have an audience, PRYV8 gives you a way to earn from private conversations and direct access to your time.</p>
             <div className="heroMeta"><span>30 sec</span><span>•</span><span>No payment</span><span>•</span><span>Just a quick vote</span></div>
           </section>
 
@@ -129,8 +130,8 @@ export default function Home() {
           </section>
 
           <footer className="footer">
-            <span>PRYV8 is an early market-validation experiment.</span>
-            <span>Adults 18+ only. No payment is taken here.</span>
+            <span>PRYV8 is being built for adults 18+.</span>
+            <span>No payment is taken here.</span>
           </footer>
         </div>
       </main>
